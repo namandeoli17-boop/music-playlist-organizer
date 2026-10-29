@@ -1,0 +1,121 @@
+/* Styles for the Music Playlist Organizer HTML dashboard (index.html) */
+:root {
+  --bg: #0f1020;
+  --card: #1a1b33;
+  --card-2: #23244a;
+  --text: #eceefb;
+  --muted: #9aa0c7;
+  --accent: #6c7bff;
+  --accent-2: #ff4fa3;
+  --border: #2f3160;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.hero {
+  text-align: center;
+  padding: 48px 20px 40px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+.hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: .5px; }
+.hero p  { opacity: .9; margin-top: 6px; }
+
+main {
+  max-width: 1100px;
+  margin: -24px auto 40px;
+  padding: 0 16px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.stat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+}
+.stat b    { display: block; font-size: 2rem; color: var(--accent); }
+.stat span { color: var(--muted); font-size: .9rem; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.card h2 {
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+}
+.card h2 small { color: var(--muted); font-weight: 400; font-size: .8rem; }
+
+.now { border-left: 5px solid var(--accent-2); }
+.now-title { font-size: 1.4rem; font-weight: 600; }
+.bar  { height: 6px; background: var(--card-2); border-radius: 99px; margin-top: 14px; overflow: hidden; }
+.fill { width: 40%; height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 560px; }
+th, td { padding: 10px 12px; text-align: left; }
+thead th {
+  background: var(--card-2);
+  color: var(--muted);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+}
+tbody tr:nth-child(even) { background: rgba(255, 255, 255, .03); }
+tbody tr:hover { background: rgba(108, 123, 255, .15); }
+
+.tag {
+  background: rgba(255, 79, 163, .18);
+  color: #ff8cc5;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-size: .8rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.grid .card { margin-bottom: 0; }
+
+.mini { padding-left: 22px; }
+.mini li { padding: 6px 0; border-bottom: 1px dashed var(--border); }
+.mini li:last-child { border-bottom: none; }
+.mini span { display: block; color: var(--muted); font-size: .85rem; }
+
+.empty { color: var(--muted); font-style: italic; }
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 20px;
+  font-size: .85rem;
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 32px 14px 36px; }
+  .card { padding: 14px; }
+}

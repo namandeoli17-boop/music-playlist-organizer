@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Music Playlist Organizer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero"><h1>&#9835; Music Playlist Organizer</h1><p>A Data Structure Based C++ Application &middot; BCA 3rd Semester</p></header>
+<main>
+<section class="stats">
+<div class="stat"><b>11</b><span>Songs in library</span></div>
+<div class="stat"><b>1</b><span>Playlists</span></div>
+<div class="stat"><b>10</b><span>In play queue</span></div>
+<div class="stat"><b>4</b><span>Songs played</span></div>
+</section>
+<section class="now card"><h2>Now Playing</h2>
+<p class="now-title">Lover</p><p>Diljit Dosanjh &middot; Lover &middot; 3:11</p>
+<div class="bar"><div class="fill"></div></div>
+</section>
+<section class="card"><h2>Library <small>11 songs &middot; 45:04 total</small></h2>
+<div class="table-wrap"><table>
+<thead><tr><th>#</th><th>Title</th><th>Artist</th><th>Album</th><th>Genre</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Kun Faya Kun</td><td>A. R. Rahman</td><td>Rockstar</td><td><span class="tag">Sufi</span></td><td>7:08</td></tr>
+<tr><td>2</td><td>Chaiyya Chaiyya</td><td>Sukhwinder Singh</td><td>Dil Se</td><td><span class="tag">Bollywood</span></td><td>6:53</td></tr>
+<tr><td>3</td><td>Kesariya</td><td>Arijit Singh</td><td>Brahmastra</td><td><span class="tag">Romantic</span></td><td>4:28</td></tr>
+<tr><td>4</td><td>Brown Munde</td><td>AP Dhillon</td><td>Brown Munde</td><td><span class="tag">Punjabi</span></td><td>4:27</td></tr>
+<tr><td>5</td><td>Tum Hi Ho</td><td>Arijit Singh</td><td>Aashiqui 2</td><td><span class="tag">Romantic</span></td><td>4:22</td></tr>
+<tr><td>6</td><td>Shape of You</td><td>Ed Sheeran</td><td>Divide</td><td><span class="tag">Pop</span></td><td>3:54</td></tr>
+<tr><td>7</td><td>Believer</td><td>Imagine Dragons</td><td>Evolve</td><td><span class="tag">Rock</span></td><td>3:24</td></tr>
+<tr><td>8</td><td>Blinding Lights</td><td>The Weeknd</td><td>After Hours</td><td><span class="tag">Pop</span></td><td>3:20</td></tr>
+<tr><td>9</td><td>Lover</td><td>Diljit Dosanjh</td><td>Lover</td><td><span class="tag">Punjabi</span></td><td>3:11</td></tr>
+<tr><td>10</td><td>Excuses</td><td>AP Dhillon</td><td>The Brownprint</td><td><span class="tag">Punjabi</span></td><td>2:57</td></tr>
+<tr><td>11</td><td>Tum Hi Ho</td><td>a</td><td>b</td><td><span class="tag">c</span></td><td>1:00</td></tr>
+</tbody></table></div>
+</section>
+<section class="card"><h2>Favourites <small>4 songs &middot; 16:14 total</small></h2>
+<div class="table-wrap"><table>
+<thead><tr><th>#</th><th>Title</th><th>Artist</th><th>Album</th><th>Genre</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Tum Hi Ho</td><td>Arijit Singh</td><td>Aashiqui 2</td><td><span class="tag">Romantic</span></td><td>4:22</td></tr>
+<tr><td>2</td><td>Kesariya</td><td>Arijit Singh</td><td>Brahmastra</td><td><span class="tag">Romantic</span></td><td>4:28</td></tr>
+<tr><td>3</td><td>Excuses</td><td>AP Dhillon</td><td>The Brownprint</td><td><span class="tag">Punjabi</span></td><td>2:57</td></tr>
+<tr><td>4</td><td>Brown Munde</td><td>AP Dhillon</td><td>Brown Munde</td><td><span class="tag">Punjabi</span></td><td>4:27</td></tr>
+</tbody></table></div>
+</section>
+<div class="grid">
+<section class="card"><h2>Up Next <small>queue (FIFO)</small></h2>
+<ol class="mini">
+<li><strong>Kun Faya Kun</strong><span>A. R. Rahman</span></li>
+<li><strong>Believer</strong><span>Imagine Dragons</span></li>
+<li><strong>Shape of You</strong><span>Ed Sheeran</span></li>
+<li><strong>Chaiyya Chaiyya</strong><span>Sukhwinder Singh</span></li>
+<li><strong>Excuses</strong><span>AP Dhillon</span></li>
+<li><strong>Brown Munde</strong><span>AP Dhillon</span></li>
+<li><strong>Blinding Lights</strong><span>The Weeknd</span></li>
+<li><strong>Tum Hi Ho</strong><span>a</span></li>
+<li><strong>Kesariya</strong><span>Arijit Singh</span></li>
+<li><strong>Tum Hi Ho</strong><span>Arijit Singh</span></li>
+</ol>
+</section>
+<section class="card"><h2>Recently Played <small>stack (LIFO)</small></h2>
+<ol class="mini">
+<li><strong>Lover</strong><span>Diljit Dosanjh</span></li>
+<li><strong>Kun Faya Kun</strong><span>A. R. Rahman</span></li>
+<li><strong>Chaiyya Chaiyya</strong><span>Sukhwinder Singh</span></li>
+<li><strong>Kun Faya Kun</strong><span>A. R. Rahman</span></li>
+</ol>
+</section>
+<section class="card"><h2>A &ndash; Z <small>binary search tree</small></h2>
+<ol class="mini">
+<li><strong>Believer</strong><span>Imagine Dragons</span></li>
+<li><strong>Blinding Lights</strong><span>The Weeknd</span></li>
+<li><strong>Brown Munde</strong><span>AP Dhillon</span></li>
+<li><strong>Chaiyya Chaiyya</strong><span>Sukhwinder Singh</span></li>
+<li><strong>Excuses</strong><span>AP Dhillon</span></li>
+<li><strong>Kesariya</strong><span>Arijit Singh</span></li>
+<li><strong>Kun Faya Kun</strong><span>A. R. Rahman</span></li>
+<li><strong>Lover</strong><span>Diljit Dosanjh</span></li>
+<li><strong>Shape of You</strong><span>Ed Sheeran</span></li>
+<li><strong>Tum Hi Ho</strong><span>Arijit Singh</span></li>
+<li><strong>Tum Hi Ho</strong><span>a</span></li>
+</ol>
+</section>
+</div>
+</main>
+<footer>Generated by the Music Playlist Organizer (C++). Total entries: 15</footer>
+</body>
+</html>
